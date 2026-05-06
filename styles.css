@@ -92,7 +92,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 200px; /*had to add margin-bottom again, wondering if the justify-content not working really has to do with the browser*/
+    /* margin-bottom: 200px; had to add margin-bottom again, but adding this margin overlaps with "Why choose Library" section when activated */
 }
 
  h1 {
@@ -128,3 +128,21 @@ header {
  .header_img--wrapper {
     padding: 20px;
  }
+
+ .container {
+    padding: 56px 0;
+ }
+
+ .row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+ }
+
+ /* 
+ HIGHLIGHTS
+ */
+
+.highlight__wrapper {
+   display: flex; 
+}
