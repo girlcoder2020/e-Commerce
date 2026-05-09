@@ -91,7 +91,10 @@ li {
     text-align: center;
     border: none;
     color: #7342d6;
+    display: none;
 }
+
+
 
 .menu__backdrop {
     position: absolute;
@@ -104,12 +107,29 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;  
+    opacity: 1;  
 }
 
 .menu__links {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+
+.menu__link {
+    font-size: 40px;
+    color: white;
 }
 
 .btn__menu--close { /*x used to close the menu*/
@@ -380,4 +400,14 @@ footer {
 
 .footer__link {
     padding: 0 8px;
+}
+
+@media (max-width: 550px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+       display: block; 
+    }
 }
